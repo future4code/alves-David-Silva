@@ -1,0 +1,15 @@
+Olá, meu nome é David Henrique Souza da Silva e estou aprendendo git e github com a Labenu.
+
+Estou editando esse arquivo txt atráves do VSCode que eu acessei pelo terminal usando o comando 'code minha-bio.txt'
+
+Estou muito empolgado com o curso!
+
+Conto com todos vocês ao longo desses 6 meses que virão.
+
+Eu gosto de animes e doramas de romance, porém assisto filmes e séries no geral de qualquer gênero. Sou bastante eclético em relação ao gosto musical mas sempre vou ter um lugarzinho especial no coração para o rock/metal.
+
+Meu primeiro projeto com progamação foi uma login page e meu segundo foi uma calculadora funcional.
+
+Estou estudando programação há cerca de 2~3 meses e já estou convencido de que essa é minha profissão, eu simplemente não me vejo trabalhando com outra coisa mais.
+
+Muito obrigado por tudo que foi ensinando até o momento e estou ansioso (no bom sentido) pelo resto do curso!
