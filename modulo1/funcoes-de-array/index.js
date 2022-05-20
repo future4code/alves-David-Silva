@@ -46,14 +46,45 @@ const produtos = [
     { nome: "Sabão em Pó Ypê", categoria: "Limpeza", preco: 10.80 }
  ]
 
- const nomeDosProdutos = produtos.map((i)=>i.nome)
- console.log(nomeDosProdutos)
- const desconto = produtos.map((i)=>i.preco)
- const newArr2 = [{nome: nomeDosProdutos,preco:desconto}]
+const apenasNomes = produtos.map(i=>i.nome)
+console.log(apenasNomes)
 
- console.log(newArr2)
+ const nomeEDesconto = produtos.map(i => {
+    novoObjeto = {nome:i.nome,preco:(i.preco-i.preco*0.05).toFixed(2)} 
+    return novoObjeto
+ })
+ console.log(nomeEDesconto)
 
- 
+ const apenasBebidas = produtos.filter(i => i.categoria == 'Bebidas')
+ console.log(apenasBebidas)
+
+ const apenasYpe = produtos.filter(i => {
+     temYpe = i.nome.includes('Ypê')
+     return temYpe
+ })
+ console.log(apenasYpe)
+
+ const compreYpe = apenasYpe.map(i => {
+     msg = `Compre ${i.nome} por apenas ${i.preco}`
+     return msg
+ })
+ console.log(compreYpe)
+
+ const pokemons = [
+    { nome: "Bulbasaur", tipo: "grama" },
+    { nome: "Bellsprout", tipo: "grama" },
+    { nome: "Charmander", tipo: "fogo" },
+    { nome: "Vulpix", tipo: "fogo" },
+    { nome: "Squirtle", tipo: "água" },
+    { nome: "Psyduck", tipo: "água" },
+ ]
+
+const nomeOrdemAlfabetica = pokemons.map(i => i.nome).sort()
+console.log(nomeOrdemAlfabetica)
+
+const apenasTipos = pokemons.map(i => i.tipo)
+const setApenasTipos = new Set(apenasTipos)
+console.log(setApenasTipos)
 
  
 
