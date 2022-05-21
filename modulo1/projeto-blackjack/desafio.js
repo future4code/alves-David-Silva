@@ -1,20 +1,6 @@
-/**
- * EXEMPLO DE UTILIZAÇÃO DA 'comprarCarta'
- * 
- * 
-    const carta = comprarCarta(); // Sorteia uma carta. Por exemplo, o rei de ouros
-    
-    console.log(carta.texto) // imprime o texto da carta. Exemplo: "K♦️" (indica "K" de ouros)
-    console.log(carta.valor) // imprime o valor da carta (um número). Exemplo: 10 (dado que "K" vale 10)
- * 
- * 
- * 
- */
+alert('Bem vindo(a) ao Blackjack de David Henrique!')
 
-console.log('Bem vindo(a) ao Blackjack de David Henrique!')
-
-
-let blackjackDavidHenrique = () => {
+const blackjackDavidHenrique = () => {
 
    let maoUsuario = []
    let maoDavid = []
@@ -34,38 +20,43 @@ let blackjackDavidHenrique = () => {
       }
    }
 
-   let pontuacaoUsuario = () => maoUsuario.map(item => item.valor).reduce((prev, atual) => prev + atual, 0)
-
-   let pontuacaoDavid = maoDavid[0].valor + maoDavid[1].valor
-
-   let perguntaCompra = confirm(`Sua primeira carta foi ${maoUsuario[0].texto}, sua segunda carta foi ${maoUsuario[1].texto} e sua pontuação está em ${pontuacaoUsuario()}.\nA minha primeira carta foi ${maoDavid[0].texto}\nVocê deseja comprar outra carta?`)
+   let cartasUsuario = () => maoUsuario.map(e => e.texto).join(' ')
+   let cartasDavid = () => maoDavid.map(e => e.texto).join(' ')
+   let pontuacaoUsuario = () => maoUsuario.map(e => e.valor).reduce((p, a) => p + a, 0)
+   let pontuacaoDavid = () => maoDavid.map(e => e.valor).reduce((p, a) => p + a, 0)
 
    let continuarComprando = true
 
    while (continuarComprando) {
-      if (perguntaCompra && pontuacaoUsuario() < 21) {
+
+      msgDeCompraRevelada = confirm(`Suas cartas são: ${cartasUsuario()}\nSua pontuação é: ${pontuacaoUsuario()}\nMinha carta revelada é: ${maoDavid[0].texto}\nVocê gostaria de comprar uma carta?`)
+
+      while (pontuacaoDavid() < pontuacaoUsuario()) {
+         maoDavid.push(comprarCarta())
+      }
+
+      if (msgDeCompraRevelada) {
          maoUsuario.push(comprarCarta())
-         alert(`Sua nova carta foi ${maoUsuario[maoUsuario.length - 1].texto}, sua pontuação agora é de: ${pontuacaoUsuario()}.`)
-      } else if (pontuacaoUsuario < 21) {
-         perguntaCompra = confirm(`sua pontuação atual é de: ${pontuacaoUsuario()}\nVocê deseja comprar mais uma carta?`)
-      } else if (pontuacaoUsuario() > 21) {
-         continuarComprando = false
-         alert(`Como sua última carta veio ${maoUsuario[maoUsuario.length - 1].texto} você ultrapassou 21 pontos, então você perdeu essa partida.`)
-         alert(`Sua pontuação ficou no total de ${pontuacaoUsuario()}.\nMinha segunda carta foi ${maoDavid[1].texto} fazendo com que minha pontuação seja de ${pontuacaoDavid}.\nPontuação final:\nVocê: ${pontuacaoUsuario()}\nEu: ${pontuacaoDavid}`)
+         alert(`Você recebeu: ${maoUsuario[maoUsuario.length - 1].texto}`)
       } else {
          continuarComprando = false
-         alert(`Sua pontuação ficou no total de ${pontuacaoUsuario()}.\nMinha segunda carta foi ${maoDavid[1].texto} fazendo com que minha pontuação seja de ${pontuacaoDavid}.\nPontuação final:\nVocê: ${pontuacaoUsuario()}\nEu: ${pontuacaoDavid}`)
+      }
+
+      if (pontuacaoUsuario() > 21) {
+         alert(`Suas cartas ${cartasUsuario()} ultrapassam 21 pontos.`)
+         continuarComprando = false
       }
    }
 
-   if (pontuacaoDavid > pontuacaoUsuario()) {
-      alert('Que pena, você perdeu :)')
-   } else if (pontuacaoDavid < pontuacaoUsuario()) {
-      alert('Parabéns, você venceu :(')
-   } else {
-      alert('Empatamos! Mas foi uma bela disputa :)')
-   }
+   alert(`Sua pontuação: ${cartasUsuario()} = ${pontuacaoUsuario()}\nMinha pontuação: ${cartasDavid()} = ${pontuacaoDavid()}`)
 
+   if ((pontuacaoUsuario() > pontuacaoDavid()) && (pontuacaoUsuario() < 22) || pontuacaoUsuario() < 22 && pontuacaoDavid() > 21) {
+      alert('Você ganhou!')
+   } else if (pontuacaoUsuario() == pontuacaoDavid() || pontuacaoDavid() > 21 && pontuacaoUsuario() > 21) {
+      alert('Empatamos!')
+   } else if (pontuacaoUsuario() < pontuacaoDavid() && pontuacaoDavid() < 22 || pontuacaoUsuario() > 22 && pontuacaoDavid() < 21) {
+      alert('Você perdeu!')
+   }
 }
 
 let confirmar = confirm('Você deseja iniciar uma partida?')
@@ -73,6 +64,5 @@ let confirmar = confirm('Você deseja iniciar uma partida?')
 if (confirmar) {
    blackjackDavidHenrique()
 } else {
-   console.log('Partida cancelada.')
+   alert('Partida cancelada.')
 }
-
