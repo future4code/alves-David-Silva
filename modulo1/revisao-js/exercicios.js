@@ -101,7 +101,7 @@ function retornaChamadaDeFilme(filme) {
 
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
-    e = {
+    novoObj = {
         ...pessoa,
         nome: 'ANÔNIMO'
     }
@@ -115,20 +115,24 @@ function retornaPessoasAutorizadas(pessoas) {
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-    return pessoas.filter(e=>e != retornaPessoasAutorizadas())
+     return pessoas.filter(e => e.idade <= 14 || e.altura < 1.5 || e.idade > 60)
 }
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
-
+        
 }
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-
+    return consultas.sort((a,b) => {
+    if (a.nome < b.nome) return -1
+    if (a.nome > b.nome) return 1
+    return 0
+    })
 }
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-
+   
 }
