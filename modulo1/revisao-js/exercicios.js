@@ -39,6 +39,7 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
+    //return array.filter(e => e % 2 == 0).map(e => e**2)
     let array2 = []
     array.forEach(e => {
         if (e % 2 == 0) {
@@ -46,7 +47,6 @@ function retornaNumerosParesElevadosADois(array) {
         }
     })
     return array2
-
 }
 
 // EXERCÍCIO 06
@@ -56,7 +56,11 @@ function retornaMaiorNumero(array) {
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-
+    const objt = {}
+    objt.maiorNumero = Math.max(num1,num2)
+    objt.maiorDivisivelPorMenor = Math.max(num1,num2) % Math.min(num1,num2) == 0
+    objt.diferenca = Math.abs(num1 - num2)
+    return objt
 }
 
 // EXERCÍCIO 08
