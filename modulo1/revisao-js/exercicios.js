@@ -10,8 +10,13 @@ function retornaTamanhoArray(array) {
 
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
-  return array.reverse()
-}
+  let array2 = []
+  array.forEach(e => {
+      array2.unshift(e)
+  })
+  return array2    
+  } 
+
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
