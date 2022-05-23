@@ -43,7 +43,7 @@ function retornaNumerosParesElevadosADois(array) {
     let array2 = []
     array.forEach(e => {
         if (e % 2 == 0) {
-            return array2.push(e**2)
+            return array2.push(e ** 2)
         }
     })
     return array2
@@ -57,8 +57,8 @@ function retornaMaiorNumero(array) {
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
     const objt = {}
-    objt.maiorNumero = Math.max(num1,num2)
-    objt.maiorDivisivelPorMenor = Math.max(num1,num2) % Math.min(num1,num2) == 0
+    objt.maiorNumero = Math.max(num1, num2)
+    objt.maiorDivisivelPorMenor = Math.max(num1, num2) % Math.min(num1, num2) == 0
     objt.diferenca = Math.abs(num1 - num2)
     return objt
 }
@@ -66,19 +66,19 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
     array = []
-    for(let i = 0; i < n*2; i++){
-        if(i % 2 == 0){
+    for (let i = 0; i < n * 2; i++) {
+        if (i % 2 == 0) {
             array.push(i)
-        }        
+        }
     }
     return array
 }
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
-    if(ladoA == ladoB && ladoB == ladoC){
+    if (ladoA == ladoB && ladoB == ladoC) {
         return "Equilátero"
-    } else if(ladoA == ladoB || ladoB == ladoC || ladoA == ladoC){
+    } else if (ladoA == ladoB || ladoB == ladoC || ladoA == ladoC) {
         return "Isósceles"
     } else {
         return "Escaleno"
@@ -87,35 +87,35 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-    array.sort((a,b) => a - b)
-    segundoMaior = array[array.length-2]
+    array.sort((a, b) => a - b)
+    segundoMaior = array[array.length - 2]
     segundoMenor = array[1]
-    newArr = [segundoMaior,segundoMenor]
-    return newArr    
+    newArr = [segundoMaior, segundoMenor]
+    return newArr
 }
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
- return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores.join(', ')}.`
+    return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores.join(', ')}.`
 }
 
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
- novoObj = {
-    ...pessoa,
-    nome: 'ANÔNIMO'
- }
- return novoObj
+    e = {
+        ...pessoa,
+        nome: 'ANÔNIMO'
+    }
+    return novoObj
 }
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-
+    return pessoas.filter(e => e.idade > 14 && e.altura > 1.5 && e.idade < 60)
 }
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-
+    return pessoas.filter(e=>e != retornaPessoasAutorizadas())
 }
 
 // EXERCÍCIO 14
