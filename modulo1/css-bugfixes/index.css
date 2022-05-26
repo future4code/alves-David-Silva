@@ -148,6 +148,14 @@ td button:hover {
     border-bottom: 2px solid black;
 }
 
+.icone:hover {
+    opacity: 50%;
+}
+
+.icone:active {
+    opacity: 100%;
+}
+
 
 #back-button {
     background-color: white;
