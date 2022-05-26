@@ -78,10 +78,11 @@ section {
     margin-top: 100px;
 }
 
-section > p,h3{
+section > p, h3{
     margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
+
 
 #container-para-comprar {
     background-color: #e7eb90;
