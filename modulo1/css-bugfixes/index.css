@@ -84,6 +84,12 @@ section > p, h3{
     margin-top: 40px;
 }
 
+ol {
+   margin: auto;
+   width: fit-content;
+    
+}
+
 
 #container-para-comprar {
     background-color: #e7eb90;
