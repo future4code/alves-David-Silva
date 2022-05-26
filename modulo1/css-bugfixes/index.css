@@ -130,6 +130,12 @@ td button:hover {
     height: 100px;
 }
 
+.search {
+    outline: 0;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
 
 #back-button {
     background-color: white;
