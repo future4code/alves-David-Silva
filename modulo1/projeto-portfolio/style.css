@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mina', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mina&family=Roboto:wght@100&family=ZCOOL+QingKe+HuangYou&display=swap');
+
+p {
+    font-size: 18px;
+    text-shadow: 4px 7px 11px rgba(27,12,7,0.83);
+}
+
+h1 {
+    text-shadow: 4px 7px 11px rgba(27,12,7,0.83);
+}
+
+body {
+    background-color: rgb(178, 252, 227);
+}
+
+.menu {
+    width: 700px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    white-space: nowrap;
+}
+
+li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px 0px 10px;
+    padding: 10px;
+    height: 100%;
+    background-color: rgb(143, 192, 213);
+    border: 1px black solid;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+li:hover {    
+    border: 1px white solid;
+    border-bottom: none;
+    color: white;
+    transition: 0.4s;
+}
+
+.container1 {
+    margin: auto;
+    margin-top: -2px;
+    width: 700px;
+    height: 500px;
+    background: rgb(143, 192, 213);
+    background: linear-gradient(180deg, rgba(143, 192, 213, 1) 0%, rgba(9, 9, 121, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    border: 1px solid black;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.primeira-secao {
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    height: 190px;
+    width: 600px;
+    border: 2px black solid;
+    border-radius: 50px;
+    background: linear-gradient(180deg, rgb(185, 27, 174) 0%, rgb(44, 44, 200) 100%, rgba(0, 212, 255, 1) 100%);
+    box-shadow: 5px 5px 10px 5px #000000a4;
+}
+
+#ola-index {
+    margin-right: 75px;
+}
+
+#avatar-dd {
+    float: left;
+    margin-top: 50px;
+    margin-left: -5px;
+    
+}
+
+.icon1, .icon2, .icon3, .icon4, .icon5 {
+    width: 75px;
+    height: 75px;
+    opacity: 70%;
+    margin-bottom: -10px;
+}
+
+.icon1:hover, .icon2:hover, .icon3:hover, .icon4:hover, .icon5:hover {
+    opacity: 100%;
+}
+
+#pfooter {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 460px;
+    margin: auto;
+    border-radius: 50px;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 5px 5px 10px 5px #000000a4;
+}
+
