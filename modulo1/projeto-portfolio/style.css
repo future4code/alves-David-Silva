@@ -1,12 +1,13 @@
+/* Estilização Global */
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Mina', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-family: 'Orbitron', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Mina&family=Roboto:wght@100&family=ZCOOL+QingKe+HuangYou&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
 
 body {
     background-color: rgb(178, 252, 227);
@@ -64,16 +65,17 @@ li:hover {
     box-shadow: 5px 5px 15px 5px #000000;
 }
 
+/* Estlização Home */
+
 .primeira-secao {
     margin: auto;
-    margin-top: 50px;
+    margin-top: 70px;
     padding: 10px;
     text-align: center;
-    height: 190px;
+    height: 160px;
     width: 675px;
     border: 2px black solid;
     border-radius: 50px;
-    /* background: linear-gradient(180deg, rgb(185, 27, 174) 0%, rgb(44, 44, 200) 100%, rgba(0, 212, 255, 1) 100%); */
     background-color: #ffffff;
     box-shadow: 5px 5px 10px 5px #000000a4;
 }
@@ -85,9 +87,8 @@ li:hover {
 
 .primeira-secao img {
     float: left;
-    margin-top: 50px;
+    margin-top: 38px;
     margin-left: -5px;
-
 }
 
 .segunda-secao {
@@ -99,8 +100,10 @@ li:hover {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     width: 420px;
+    height: 28px;
     margin: auto;
     margin-bottom: 30px;
+    padding-top: 5px;
     text-align: center;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 13px;
@@ -113,13 +116,6 @@ li:hover {
     margin-bottom: -10px;
 }
 
-.img-projetos {
-    width: 225px;
-    opacity: 70%;
-    margin-bottom: -18px;
-    border: 1px solid black;
-}
-
 .segunda-secao img:hover {
     opacity: 100%;
 }
@@ -128,25 +124,28 @@ li:hover {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     width: 520px;
+    height: 60px;
     margin: auto;
     margin-top: 32px;
+    padding-top: 11px;
     text-align: center;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 25px;
     box-shadow: 5px 5px 10px 5px #000000a4;
 }
 
+/* Estilização Experiências */
+
 #primeira-secao-experiencias {
     margin: auto;
-    margin-top: 50px;
+    margin-top: 70px;
     margin-bottom: 50px;
     padding: 10px;
     text-align: center;
-    height: 370px;
+    height: 305px;
     width: 675px;
     border: 2px black solid;
     border-radius: 50px;
-    /* background: linear-gradient(180deg, rgb(185, 27, 174) 0%, rgb(44, 44, 200) 100%, rgba(0, 212, 255, 1) 100%); */
     background-color: #ffffff;
     box-shadow: 5px 5px 10px 5px #000000a4;
 }
@@ -157,32 +156,43 @@ li:hover {
     margin-left: -5px;
 }
 
+/* Estilização Projetos */
+
+.img-projetos {
+    width: 225px;
+    opacity: 70%;
+    margin-bottom: -18px;
+    margin-top: -12px;
+    border: 1px solid black;
+}
+
+/* Estilização Contato */
+
 #primeira-secao-contato {
     margin: auto;
-    margin-top: 50px;
+    margin-top: 70px;
     margin-bottom: 50px;
     padding: 10px;
     text-align: center;
-    height: 130px;
+    height: 110px;
     width: 675px;
     border: 2px black solid;
     border-radius: 50px;
-    /* background: linear-gradient(180deg, rgb(185, 27, 174) 0%, rgb(44, 44, 200) 100%, rgba(0, 212, 255, 1) 100%); */
     background-color: #ffffff;
     box-shadow: 5px 5px 10px 5px #000000a4;
 }
 
 #primeira-secao-contato img {
     float: left;
-    margin-top: 14px;
+    margin-top: 5px;
     margin-left: -5px;
 }
 
 .secao-form {
     margin: auto;
-    height: 300px;
-    margin-top: -30px;
-    width: 675px;
+    height: 250px;
+    margin-top: -10px;
+    width: 400px;
     border: 2px black solid;
     border-radius: 50px;
     background-color: #ffffff;
@@ -211,19 +221,18 @@ input {
     border: 2px blue solid;
 }
 
-#bt:hover {
+#bt:active {
     background-color: blue;
     color: white;
     border: 2px black solid;
 }
 
 .logo-contato {
-    width: 100%;
     text-align: center;
-    margin-top: 12px;
+    margin-top: 25px;
 }
 
 .logo-contato a, .logo-contato img {
-    width: 50px;
+    width: 60px;
     margin-right: 3px;    
 }
