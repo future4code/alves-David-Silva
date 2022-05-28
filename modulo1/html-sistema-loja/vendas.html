@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="centralizar">
+            <div class="filha">
+                DH
+            </div>
+        </div>
+        <p>Loja do David</p>
+    </header>
+
+    <nav>
+        <a href="./index.html">Página Inicial</a>
+        <a href="./ctrl-estoque.html">Controle de Estoque</a>
+        <a href="./add-produto.html">Adicionar Produto</a>
+        <a href="./funcionarios.html">Funcionários</a>
+        <a href="./vendas.html">Vendas</a>
+        <a href="./historico-vendas.html">Histórico de Vendas</a>
+    </nav>
+
+    <div class="reg-venda">
+        <h2>Registrar vendas</h2>
+        <form action="">
+            <label for="vendas">Selecione o produto:</label>
+            <select name="vendas" id="vendas" class="vendas">
+                <option value="lanches">Lanches</option>
+                <option value="bebidas">Bebidas</option>
+                <option value="jogos">Jogos</option>
+                <option value="brinquedos">Brinquedos</option>
+                <option value="livros">Livros</option>
+            </select>
+            <br>
+            <label for="qtd-vendas">Quantidade vendida:</label>
+            <input type="number" name="qtd-vendas" id="qtd-vendas" class="vendas">
+            <br>
+            <label for="pagamento">Forma de pagamento:</label>
+            <select name="pagamento" id="pagamento" class="vendas">
+                <option value="dinheiro">Dinheiro</option>
+                <option value="cartao">Cartão</option>
+            </select>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+
+
+
+
+
+
+    <footer>
+        <p>Siga-nos nas redes sociais!</p>
+        <img src="./img/favicon-fb.png" width="20px" />
+        <img src="./img/favicon-intagram.jpg" width="20px" />
+        <img src="./img/favicon-tt.png" width="20px" />
+    </footer>
+</body>
+
+</html>
