@@ -2,57 +2,61 @@
     margin: 0;
     padding: 0;
     font-family: 'Mina', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Mina&family=Roboto:wght@100&family=ZCOOL+QingKe+HuangYou&display=swap');
-
-p {
-    font-size: 18px;
-    text-shadow: 4px 7px 11px rgba(27,12,7,0.83);
-}
-
-h1 {
-    text-shadow: 4px 7px 11px rgba(27,12,7,0.83);
-}
 
 body {
     background-color: rgb(178, 252, 227);
 }
 
+p {
+    font-size: 21px;
+    text-shadow: 2px 3px 4px rgba(0,0,0,0.5);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .menu {
-    width: 700px;
+    width: 900px;
     height: 50px;
     margin: 0 auto;
     text-align: center;
     white-space: nowrap;
 }
 
-li {
+.menu li {
     display: inline-block;
     list-style: none;
     margin: 10px 10px 0px 10px;
     padding: 10px;
     height: 100%;
-    background-color: rgb(143, 192, 213);
-    border: 1px black solid;
-    border-bottom: none;
+    background-color: white;
+    border: 2px black solid;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 5px #000000a4;
     font-weight: bold;
+    font-size: 21px;
+    text-shadow: 2px 3px 4px rgba(0,0,0,0.5);
 }
 
-li:hover {    
+li:hover {
     border: 1px white solid;
-    border-bottom: none;
+    background-color: #000000;
     color: white;
     transition: 0.4s;
 }
 
-.container1 {
+.container {
     margin: auto;
     margin-top: -2px;
-    width: 700px;
-    height: 500px;
+    width: 900px;
+    height: 600px;
     background: rgb(143, 192, 213);
     background: linear-gradient(180deg, rgba(143, 192, 213, 1) 0%, rgba(9, 9, 121, 1) 100%, rgba(0, 212, 255, 1) 100%);
     border: 1px solid black;
@@ -63,44 +67,163 @@ li:hover {
 .primeira-secao {
     margin: auto;
     margin-top: 50px;
+    padding: 10px;
     text-align: center;
     height: 190px;
-    width: 600px;
+    width: 675px;
     border: 2px black solid;
     border-radius: 50px;
-    background: linear-gradient(180deg, rgb(185, 27, 174) 0%, rgb(44, 44, 200) 100%, rgba(0, 212, 255, 1) 100%);
+    /* background: linear-gradient(180deg, rgb(185, 27, 174) 0%, rgb(44, 44, 200) 100%, rgba(0, 212, 255, 1) 100%); */
+    background-color: #ffffff;
     box-shadow: 5px 5px 10px 5px #000000a4;
 }
 
 #ola-index {
     margin-right: 75px;
+    text-shadow: 2px 3px 4px rgba(0,0,0,0.5);
 }
 
-#avatar-dd {
+.primeira-secao img {
     float: left;
     margin-top: 50px;
     margin-left: -5px;
-    
+
 }
 
-.icon1, .icon2, .icon3, .icon4, .icon5 {
-    width: 75px;
-    height: 75px;
+.segunda-secao {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.segunda-secao p {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 420px;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 13px;
+    box-shadow: 5px 5px 10px 5px #000000a4;
+}
+
+.logos {
+    width: 90px;
     opacity: 70%;
     margin-bottom: -10px;
 }
 
-.icon1:hover, .icon2:hover, .icon3:hover, .icon4:hover, .icon5:hover {
+.img-projetos {
+    width: 225px;
+    opacity: 70%;
+    margin-bottom: -18px;
+    border: 1px solid black;
+}
+
+.segunda-secao img:hover {
     opacity: 100%;
 }
 
-#pfooter {
+.terceira-secao {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
-    width: 460px;
+    width: 520px;
     margin: auto;
-    border-radius: 50px;
+    margin-top: 32px;
+    text-align: center;
     border: 2px solid rgb(0, 0, 0);
+    border-radius: 25px;
     box-shadow: 5px 5px 10px 5px #000000a4;
 }
 
+#primeira-secao-experiencias {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px;
+    text-align: center;
+    height: 370px;
+    width: 675px;
+    border: 2px black solid;
+    border-radius: 50px;
+    /* background: linear-gradient(180deg, rgb(185, 27, 174) 0%, rgb(44, 44, 200) 100%, rgba(0, 212, 255, 1) 100%); */
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px 5px #000000a4;
+}
+
+#primeira-secao-experiencias img {
+    float: left;
+    margin-top: 50px;
+    margin-left: -5px;
+}
+
+#primeira-secao-contato {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px;
+    text-align: center;
+    height: 130px;
+    width: 675px;
+    border: 2px black solid;
+    border-radius: 50px;
+    /* background: linear-gradient(180deg, rgb(185, 27, 174) 0%, rgb(44, 44, 200) 100%, rgba(0, 212, 255, 1) 100%); */
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px 5px #000000a4;
+}
+
+#primeira-secao-contato img {
+    float: left;
+    margin-top: 14px;
+    margin-left: -5px;
+}
+
+.secao-form {
+    margin: auto;
+    height: 300px;
+    margin-top: -30px;
+    width: 675px;
+    border: 2px black solid;
+    border-radius: 50px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px 5px #000000a4;
+}
+
+input, textarea {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+input {
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 250px;
+}
+
+#bt {
+    background-color: #000000;
+    color: white;
+    border: 2px blue solid;
+}
+
+#bt:hover {
+    background-color: blue;
+    color: white;
+    border: 2px black solid;
+}
+
+.logo-contato {
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.logo-contato a, .logo-contato img {
+    width: 50px;
+    margin-right: 3px;    
+}
