@@ -11,22 +11,73 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 8fr 1fr;
 
-    grid-template-areas: 'head''main''footer';
+    grid-template-areas:    'head'
+                            'main'
+                            'footer';
 
 }
 
-head {
-    background-color: rgb(198, 198, 55);
+.head {
     grid-area: head;
+    background-color: rgb(198, 198, 55);
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.main {
+    grid-area: main;
+    background-color: blue;   
+
 }
 
 main {
-    background-color: blue;
-    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-footer {
-    background-color: chartreuse;
+.video-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 24%;
+}
+
+.video-link video {
+    width: 100%;
+}
+
+.videos {
+    width: 24%;
+    
+}
+
+.pag-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video-on {
+    width: 50%;
+}
+
+.footer {
     grid-area: footer;
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+
 }
