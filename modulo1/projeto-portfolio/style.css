@@ -1,0 +1,238 @@
+/* Estilização Global */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+
+body {
+    background-color: rgb(178, 252, 227);
+}
+
+p {
+    font-size: 21px;
+    text-shadow: 2px 3px 4px rgba(0,0,0,0.5);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu {
+    width: 900px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.menu li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px 0px 10px;
+    padding: 10px;
+    height: 100%;
+    background-color: white;
+    border: 2px black solid;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 5px #000000a4;
+    font-weight: bold;
+    font-size: 21px;
+    text-shadow: 2px 3px 4px rgba(0,0,0,0.5);
+}
+
+li:hover {
+    border: 1px white solid;
+    background-color: #000000;
+    color: white;
+    transition: 0.4s;
+}
+
+.container {
+    margin: auto;
+    margin-top: -2px;
+    width: 900px;
+    height: 600px;
+    background: rgb(143, 192, 213);
+    background: linear-gradient(180deg, rgba(143, 192, 213, 1) 0%, rgba(9, 9, 121, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    border: 1px solid black;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+/* Estlização Home */
+
+.primeira-secao {
+    margin: auto;
+    margin-top: 70px;
+    padding: 10px;
+    text-align: center;
+    height: 160px;
+    width: 675px;
+    border: 2px black solid;
+    border-radius: 50px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px 5px #000000a4;
+}
+
+#ola-index {
+    margin-right: 75px;
+    text-shadow: 2px 3px 4px rgba(0,0,0,0.5);
+}
+
+.primeira-secao img {
+    float: left;
+    margin-top: 38px;
+    margin-left: -5px;
+}
+
+.segunda-secao {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.segunda-secao p {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 420px;
+    height: 28px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    text-align: center;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 13px;
+    box-shadow: 5px 5px 10px 5px #000000a4;
+}
+
+.logos {
+    width: 90px;
+    opacity: 70%;
+    margin-bottom: -10px;
+}
+
+.segunda-secao img:hover {
+    opacity: 100%;
+}
+
+.terceira-secao {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 520px;
+    height: 60px;
+    margin: auto;
+    margin-top: 32px;
+    padding-top: 11px;
+    text-align: center;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px 5px #000000a4;
+}
+
+/* Estilização Experiências */
+
+#primeira-secao-experiencias {
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    padding: 10px;
+    text-align: center;
+    height: 305px;
+    width: 675px;
+    border: 2px black solid;
+    border-radius: 50px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px 5px #000000a4;
+}
+
+#primeira-secao-experiencias img {
+    float: left;
+    margin-top: 50px;
+    margin-left: -5px;
+}
+
+/* Estilização Projetos */
+
+.img-projetos {
+    width: 225px;
+    opacity: 70%;
+    margin-bottom: -18px;
+    margin-top: -12px;
+    border: 1px solid black;
+}
+
+/* Estilização Contato */
+
+#primeira-secao-contato {
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    padding: 10px;
+    text-align: center;
+    height: 110px;
+    width: 675px;
+    border: 2px black solid;
+    border-radius: 50px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px 5px #000000a4;
+}
+
+#primeira-secao-contato img {
+    float: left;
+    margin-top: 5px;
+    margin-left: -5px;
+}
+
+.secao-form {
+    margin: auto;
+    height: 250px;
+    margin-top: -10px;
+    width: 400px;
+    border: 2px black solid;
+    border-radius: 50px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px 5px #000000a4;
+}
+
+input, textarea {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+input {
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 250px;
+}
+
+#bt {
+    background-color: #000000;
+    color: white;
+    border: 2px blue solid;
+}
+
+#bt:active {
+    background-color: blue;
+    color: white;
+    border: 2px black solid;
+}
+
+.logo-contato {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.logo-contato a, .logo-contato img {
+    width: 60px;
+    margin-right: 3px;    
+}
