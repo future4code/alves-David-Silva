@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container-principal {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+}
+
+/* Início Header */
+
+.nav-pai {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    background-color: mediumvioletred;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.conjunto-nav-1{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.icon1 {
+    width: 35px;
+    height: 35px;
+}
+
+.nome-logo {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.conjunto-nav-2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.btn-login {
+    width: 50px;
+}
+
+/* Final Header */
+
+/* Início Aside */
+
+.ul-pai {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 20vw;
+    background-color: #f2d0e0;
+    row-gap: 20px;
+}
+
+.conjunto-li {
+    display:flex ;
+    flex-direction: row;    
+    column-gap: 20px;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.nome-menu {
+    font-size: 20px;
+}
+
+.seta {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    padding-right: 10px;
+}
+
+/* Final Aside */
+
+/* Início Main */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: 80vh;
+    justify-content: flex-start;
+}
+
+.box-bolo {  
+    margin: 10px;
+    box-shadow: 5px 5px 15px 5px darkgrey;
+    width: 190px;
+    height: 255px;
+    text-align: center;
+}
+
+.img-bolo {
+    width: 190px;
+    height: 190px;
+}
+
+/* Final Main */
+
+/* Início Footer */
+
+footer {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    background-color: mediumvioletred;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Final Footer */
