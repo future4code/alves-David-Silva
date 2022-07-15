@@ -48,7 +48,6 @@ const ListTripsPage = () => {
         <Text>Data: {e.date}</Text>
         <Text>Descrição: {e.description}</Text>
         <Button colorScheme={'blackAlpha'} onClick={()=>{
-          localStorage.setItem('getTripId', e.id)
           goToTripDetailsPage(navigate,e.id)
           
           }}>Detalhes</Button>
