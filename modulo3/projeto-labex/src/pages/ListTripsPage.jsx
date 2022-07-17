@@ -1,4 +1,4 @@
-import { Button, Divider, Flex, Text } from '@chakra-ui/react'
+import { Button, Divider, Flex, Heading, Text } from '@chakra-ui/react'
 import React, { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import axios from 'axios'
@@ -30,24 +30,24 @@ const ListTripsPage = () => {
 
   const displayTripsList = tripsList.map((e)=>{
     return (
-      <Flex key={e.id} direction={'column'} gap={'20px'}>        
+      <Flex key={e.id} w={{base: '90vw', md: '50vw', lg: '30vw'}}  direction={'column'} bg={'blackAlpha.400'}  borderRadius={'10px'} border='1px solid lightgray' mt={'20px'} mb={'5px'} p={'5px'}>        
         
         {token === null ? (
           <>
-        <Text>{e.name}</Text>
-        <Text>Planeta: {e.planet}</Text>
-        <Text>Duração: {e.durationInDays}</Text>
-        <Text>Data: {e.date}</Text>
-        <Text>Descrição: {e.description}</Text>
+        <Text><b>Nome:</b> {e.name}</Text>
+        <Text><b>Planeta:</b> {e.planet}</Text>
+        <Text><b>Duração:</b> {e.durationInDays}</Text>
+        <Text><b>Data:</b> {e.date}</Text>
+        <Text><b>Descrição:</b> {e.description}</Text>
           </>
         ) : (
           <>
-        <Text>{e.name}</Text>
-        <Text>Planeta: {e.planet}</Text>
-        <Text>Duração: {e.durationInDays}</Text>
-        <Text>Data: {e.date}</Text>
-        <Text>Descrição: {e.description}</Text>
-        <Button colorScheme={'blackAlpha'} onClick={()=>{
+        <Text><b>Nome:</b> {e.name}</Text>
+        <Text><b>Planeta:</b> {e.planet}</Text>
+        <Text><b>Duração:</b> {e.durationInDays}</Text>
+        <Text><b>Data:</b> {e.date}</Text>
+        <Text><b>Descrição:</b> {e.description}</Text>
+        <Button colorScheme={'blue'} onClick={()=>{
           goToTripDetailsPage(navigate,e.id)
           
           }}>Detalhes</Button>
@@ -59,9 +59,10 @@ const ListTripsPage = () => {
   })
 
   return (
-    <Flex direction={'column'}>
+    <Flex direction={'column'} align={'center'}>
       <Header/>
       <Divider orientation='horizontal' />
+      <Heading mt={'12px'} as='h2' size='xl' >Viagens Disponíveis </Heading>
       {displayTripsList}
       </Flex>
   )

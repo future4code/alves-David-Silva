@@ -17,6 +17,7 @@ import { BiLogIn, BiLogOut} from "react-icons/bi";
 import { BiChevronDown } from 'react-icons/bi';
 import { goToLoginPage, goToAdminHomePage, goToApplicationFormPage, goToCreateTripPage, goToListTripsPage, goToHome, goToTripDetailsPage } from '../routes/Coordinator'
 import {useNavigate} from 'react-router-dom'
+import DavidPerfil from '../assets/david-perfil.jpg'
 
 
 const Header = () => {
@@ -54,7 +55,7 @@ const Header = () => {
         href={'https://www.linkedin.com/in/david-henrique-2a9135238/'}
         target='_blank'
         name='David Henrique'
-        src='david-perfil.jpg'
+        src={DavidPerfil}
       />
       <Heading
       onClick={()=>{goToHome(navigate)}}
