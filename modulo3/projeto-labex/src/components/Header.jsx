@@ -100,14 +100,11 @@ const Header = () => {
         {token === null ? (
             <>
             {menuItem('Home',()=>goToHome(navigate))}
-            {menuItem('Aplicar',()=>goToApplicationFormPage(navigate))}
             {menuItem('Lista de viagens',()=>goToListTripsPage(navigate))}
             </>
           ) : (
             <>
-          {menuItem('Home',()=>goToHome(navigate))}
           {menuItem('Home Admin',()=>goToAdminHomePage(navigate))}
-          {menuItem('Aplicar',()=>goToApplicationFormPage(navigate))}
           {menuItem('Criar viagem',()=>goToCreateTripPage(navigate))}
           {menuItem('Lista de viagens',()=>goToListTripsPage(navigate))}
           </>

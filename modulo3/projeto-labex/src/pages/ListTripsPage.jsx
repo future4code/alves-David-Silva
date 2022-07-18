@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
-import { goToTripDetailsPage } from '../routes/Coordinator'
+import { goToApplicationFormPage, goToTripDetailsPage } from '../routes/Coordinator'
 
 const ListTripsPage = () => {
   const [tripsList, setTripsList] = useState([])
@@ -29,6 +29,7 @@ const ListTripsPage = () => {
   },[])
 
   const displayTripsList = tripsList.map((e)=>{
+    
     return (
       <Flex key={e.id} w={{base: '90vw', md: '50vw', lg: '30vw'}}  direction={'column'} bg={'blackAlpha.400'}  borderRadius={'10px'} border='1px solid lightgray' mt={'20px'} mb={'5px'} p={'5px'}>        
         
@@ -39,6 +40,11 @@ const ListTripsPage = () => {
         <Text><b>Duração:</b> {e.durationInDays}</Text>
         <Text><b>Data:</b> {e.date}</Text>
         <Text><b>Descrição:</b> {e.description}</Text>
+        <Button mt='20px' colorScheme={'blue'} onClick={()=>{
+          localStorage.setItem('viagem', e.name)
+          goToApplicationFormPage(navigate,e.id)
+          
+          }}>Aplicar</Button>
           </>
         ) : (
           <>
@@ -47,7 +53,7 @@ const ListTripsPage = () => {
         <Text><b>Duração:</b> {e.durationInDays}</Text>
         <Text><b>Data:</b> {e.date}</Text>
         <Text><b>Descrição:</b> {e.description}</Text>
-        <Button colorScheme={'blue'} onClick={()=>{
+        <Button mt='20px' colorScheme={'blue'} onClick={()=>{
           goToTripDetailsPage(navigate,e.id)
           
           }}>Detalhes</Button>

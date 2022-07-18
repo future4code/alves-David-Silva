@@ -14,7 +14,7 @@ const Router = () => {
     <Routes>
         <Route index element={<HomePage/>}/>
         <Route path='admin' element={<AdminHomePage/>}/>
-        <Route path='application' element={<ApplicationFormPage/>}/>
+        <Route path='application/:tripId' element={<ApplicationFormPage/>}/>
         <Route path='create' element={<CreateTripPage/>}/>
         <Route path='list' element={<ListTripsPage/>}/>
         <Route path='login' element={<LoginPage/>}/>

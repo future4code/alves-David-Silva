@@ -1,4 +1,4 @@
-import { Button, Divider, Flex, Input } from '@chakra-ui/react'
+import { Button, Divider, Flex, Input, useToast, Box, Heading } from '@chakra-ui/react'
 import React from 'react'
 import Header from '../components/Header'
 import { useState, useEffect } from 'react'
@@ -9,9 +9,25 @@ import { goToAdminHomePage } from '../routes/Coordinator'
 const LoginPage = () => {
 
   const navigate = useNavigate()
-
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const toastSuccess = useToast({
+    position: 'top',
+    duration: 5000,
+    render: () => (
+      <Box
+        display={'flex'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        color='white'
+        p={3}
+        bg='mediumseagreen'
+        border='1px solid white'
+        fontWeight={'extrabold'}>
+        Logado com sucesso!
+      </Box>
+    )
+  })
 
   const onChangeEmail = (event) => {
     setEmail(event.target.value)
@@ -32,7 +48,7 @@ const LoginPage = () => {
       }
     }).then((res)=>{
       localStorage.setItem('token', res.data.token)
-      alert('Logado com sucesso!')
+      toastSuccess()
       goToAdminHomePage(navigate)
     }).catch((err)=>{
       alert(err.message)
@@ -40,14 +56,16 @@ const LoginPage = () => {
   }
 
   return (
-    <Flex direction={'column'}>
+    <Flex direction={'column'} alignItems={'center'}  >
       <Header/>
-      <Divider orientation='horizontal' />
+      <Divider orientation='horizontal' mb={'20px'} />
 
+      <Flex border={'2px solid white'} borderRadius={'5px'} alignItems={'center'} justifyContent={'space-around'} width={'280px'} height={'350px'} flexDirection={'column'} gap={'10px'} bg={'#0000003d'} p={'10px'}>
+      <Heading >Login</Heading>
       <Input type='email' onChange={onChangeEmail} value={email} placeholder={'E-mail'} />
       <Input type='password' onChange={onChangePassword} value={password} placeholder={'Senha'} />
-      <Button onClick={onSubmitLogin} colorScheme={'green'}>Enviar</Button>
-
+      <Button  onClick={onSubmitLogin} width={'100%'} colorScheme={'green'}>Enviar</Button>
+      </Flex>
 
       </Flex>
   )

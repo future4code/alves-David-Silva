@@ -9,8 +9,8 @@ export const goBack = (navigate) => {
 export const goToAdminHomePage = (navigate) => {
     navigate('/admin')
 }
-export const goToApplicationFormPage = (navigate) => {
-    navigate('/application')
+export const goToApplicationFormPage = (navigate, tripId) => {
+    navigate(`/application/${tripId}`)
 }
 export const goToCreateTripPage = (navigate) => {
     navigate('/create')

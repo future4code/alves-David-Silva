@@ -2,7 +2,7 @@ import { Divider, Flex, Button } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import Header from '../components/Header'
 import { useNavigate } from 'react-router-dom'
-import { goToAdminHomePage, goToCreateTripPage, goToTripDetailsPage, goToLoginPage  } from '../routes/Coordinator'
+import { goToAdminHomePage, goToCreateTripPage, goToTripDetailsPage, goToLoginPage, goToListTripsPage  } from '../routes/Coordinator'
 
 const AdminHomePage = () => {
   const navigate = useNavigate()
@@ -21,7 +21,7 @@ const AdminHomePage = () => {
       <Header/>
       <Divider orientation='horizontal' />
       <Button colorScheme={'blackAlpha'} onClick={()=>goToCreateTripPage(navigate)}>Criar viagem</Button>
-      <Button colorScheme={'blackAlpha'} onClick={()=>goToTripDetailsPage(navigate)}>Detalhes de viagens</Button>
+      <Button colorScheme={'blackAlpha'} onClick={()=>goToListTripsPage(navigate)}>Detalhes de viagens</Button>
       </Flex>
   )
 }
