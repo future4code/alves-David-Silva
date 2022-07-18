@@ -1,8 +1,8 @@
-import { Divider, Flex, Heading } from '@chakra-ui/react'
+import { Box, Button, Divider, Flex, Heading, useToast } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import Header from '../components/Header'
 import { useNavigate } from 'react-router-dom'
-import { goToLoginPage } from '../routes/Coordinator'
+import { goToAdminHomePage, goToListTripsPage, goToLoginPage } from '../routes/Coordinator'
 import useForm from '../hooks/useForm'
 import styled from 'styled-components'
 import axios from 'axios'
@@ -11,10 +11,44 @@ const CreateTripPage = () => {
 
   const navigate = useNavigate()
   const token = localStorage.getItem('token')
+  const toastSuccess = useToast({
+    position: 'top',
+    duration: 5000,
+    render: () => (
+      <Box
+        display={'flex'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        color='white'
+        p={3}
+        bg='mediumseagreen'
+        border='1px solid white'
+        fontWeight={'extrabold'}>
+        Viagem criada com sucesso!
+      </Box>
+    )
+  })
+  const toastWrong = useToast({
+    position: 'top',
+    duration: 5000,
+    render: () => (
+      <Box
+        display={'flex'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        color='white'
+        p={3}
+        bg='darkred'
+        border='1px solid white'
+        fontWeight={'extrabold'}>
+        É preciso estar logado para acessar essa página.'
+      </Box>
+    )
+  })
 
   useEffect(() => {
     if (token === null) {
-      alert('É preciso estar logado para acessar essa página.')
+      toastWrong()
       goToLoginPage(navigate)
     }
   }, [])
@@ -29,7 +63,6 @@ const CreateTripPage = () => {
 
   const createTrip = (event) => {
     event.preventDefault();
-
     const body = {
       name: form.name,
       planet: form.planet,
@@ -37,21 +70,16 @@ const CreateTripPage = () => {
       description: form.description,
       durationInDays: form.durationInDays
     }
-
     axios.post(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/david-silva-alves/trips`, body, {
       headers: {
         "Content-Type" : "application/json",
         "auth" : token
       }
     }).then((res)=>{
-      alert('Sucesso!')
-      console.log(res)
+      toastSuccess()
     }).catch((err)=>{
       alert(err.message)
-      console.log(err)
     })
-
-
     cleanFields();
   };
 
@@ -106,6 +134,7 @@ const CreateTripPage = () => {
         />
         <StyledButton>Enviar</StyledButton>
       </StyledForm>
+      <Button mt={'20px'} colorScheme={'whiteAlpha'} onClick={()=>goToAdminHomePage(navigate)}>Home</Button>
     </Flex>
   )
 }
@@ -127,12 +156,6 @@ const StyledInput = styled.input`
 color: black;
 width: 290px;
 height: 40px;
-`
-
-const StyledTitle = styled.h1`
-font-size: xx-large;
-align-self: center;
-margin: 20px 0 20px 0;
 `
 
 const StyledButton = styled.button`

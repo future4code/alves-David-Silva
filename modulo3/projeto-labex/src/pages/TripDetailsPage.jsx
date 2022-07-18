@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, Divider, Flex, Heading, Text } from '@chakra-ui/react'
+import { Box, Button, ButtonGroup, Divider, Flex, Heading, Text, useToast } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Header from '../components/Header'
@@ -13,10 +13,44 @@ const TripDetailsPage = () => {
   const [candidates, setCandidates] = useState([])
   const [approveds, setApproveds] = useState([])
   const token = localStorage.getItem('token')
+  const toastWrong = useToast({
+    position: 'top',
+    duration: 5000,
+    render: () => (
+      <Box
+        display={'flex'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        color='white'
+        p={3}
+        bg='darkred'
+        border='1px solid white'
+        fontWeight={'extrabold'}>
+        É preciso estar logado para acessar essa página.'
+      </Box>
+    )
+  })
+  const toastSuccess = useToast({
+    position: 'top',
+    duration: 5000,
+    render: () => (
+      <Box
+        display={'flex'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        color='white'
+        p={3}
+        bg='mediumseagreen'
+        border='1px solid white'
+        fontWeight={'extrabold'}>
+        Realizado com sucesso!!
+      </Box>
+    )
+  })
 
   useEffect(() => {
     if (token === null) {
-      alert('É preciso estar logado para acessar essa página.')
+      toastWrong()
       goToLoginPage(navigate)
     }
   },[])
@@ -42,7 +76,7 @@ const TripDetailsPage = () => {
         "auth" : token
       }
     }).then((res)=>{
-      alert('Viagem deletada!')
+      toastSuccess()
     }).catch((err)=>{
       alert(err.message)
     })
@@ -61,7 +95,7 @@ const TripDetailsPage = () => {
               "auth": token
             }
           }).then((res) => {
-            alert('Ação realizada com sucesso!')
+            toastSuccess()
             
           }).catch((err) => {
             alert(err.message)

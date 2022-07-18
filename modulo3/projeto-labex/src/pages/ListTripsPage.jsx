@@ -1,4 +1,4 @@
-import { Button, Divider, Flex, Heading, Text } from '@chakra-ui/react'
+import { Box, Button, Divider, Flex, Heading, Text } from '@chakra-ui/react'
 import React, { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import axios from 'axios'
@@ -16,11 +16,9 @@ const ListTripsPage = () => {
       axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labeX/david-silva-alves/trips')
       .then((res)=>{ 
         setTripsList(res.data.trips)
-        console.log(res.data.trips)
-
       })
       .catch((err)=>{
-        console.log(err)
+        alert(err.message)
       }) 
   }
 
@@ -43,7 +41,6 @@ const ListTripsPage = () => {
         <Button mt='20px' colorScheme={'blue'} onClick={()=>{
           localStorage.setItem('viagem', e.name)
           goToApplicationFormPage(navigate,e.id)
-          
           }}>Aplicar</Button>
           </>
         ) : (
@@ -55,7 +52,6 @@ const ListTripsPage = () => {
         <Text><b>Descrição:</b> {e.description}</Text>
         <Button mt='20px' colorScheme={'blue'} onClick={()=>{
           goToTripDetailsPage(navigate,e.id)
-          
           }}>Detalhes</Button>
           </>
         )}
@@ -68,7 +64,7 @@ const ListTripsPage = () => {
     <Flex direction={'column'} align={'center'}>
       <Header/>
       <Divider orientation='horizontal' />
-      <Heading mt={'12px'} as='h2' size='xl' >Viagens Disponíveis </Heading>
+      <Heading mt={'12px'} as='h2' size='xl' >Viagens Disponíveis</Heading>
       {displayTripsList}
       </Flex>
   )

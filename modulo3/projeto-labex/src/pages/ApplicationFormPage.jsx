@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Heading, Text } from '@chakra-ui/react'
+import { Box, Divider, Flex, Heading, Text, useToast } from '@chakra-ui/react'
 import React from 'react'
 import Header from '../components/Header'
 import { useParams } from 'react-router-dom'
@@ -11,6 +11,23 @@ const ApplicationFormPage = () => {
 
   const params = useParams()
   const viagem = localStorage.getItem('viagem')
+  const toastSuccess = useToast({
+    position: 'top',
+    duration: 5000,
+    render: () => (
+      <Box
+        display={'flex'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        color='white'
+        p={3}
+        bg='mediumseagreen'
+        border='1px solid white'
+        fontWeight={'extrabold'}>
+        Aplicado com sucesso!
+      </Box>
+    )
+  })
 
   const { form, onChange, cleanFields } = useForm({
     name: "",
@@ -36,19 +53,13 @@ const ApplicationFormPage = () => {
         "Content-Type" : "application/json",
       }
     }).then((res)=>{
-      alert('Sucesso!')
-      console.log(res)
+      toastSuccess()
     }).catch((err)=>{
       alert(err.message)
-      console.log(err)
     })
-    
-    
     cleanFields();
   };
 
-console.log(viagem)
-console.log(params.tripId)
 
   return (
     <Flex direction={'column'} justify={'center'} align={'center'}>

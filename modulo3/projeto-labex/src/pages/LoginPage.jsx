@@ -28,6 +28,23 @@ const LoginPage = () => {
       </Box>
     )
   })
+  const toastWrong = useToast({
+    position: 'top',
+    duration: 5000,
+    render: () => (
+      <Box
+        display={'flex'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        color='white'
+        p={3}
+        bg='darkred'
+        border='1px solid white'
+        fontWeight={'extrabold'}>
+        Erro, tente novamente.
+      </Box>
+    )
+  })
 
   const onChangeEmail = (event) => {
     setEmail(event.target.value)
@@ -51,7 +68,7 @@ const LoginPage = () => {
       toastSuccess()
       goToAdminHomePage(navigate)
     }).catch((err)=>{
-      alert(err.message)
+      toastWrong()
     })
   }
 

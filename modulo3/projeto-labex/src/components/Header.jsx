@@ -10,7 +10,9 @@ import {
   MenuDivider,
   Heading,
   Text,
-  Fade
+  Fade,
+  useToast,
+  Box
 } from "@chakra-ui/react"
 import { motion } from 'framer-motion'
 import { BiLogIn, BiLogOut} from "react-icons/bi";
@@ -20,16 +22,32 @@ import {useNavigate} from 'react-router-dom'
 import DavidPerfil from '../assets/david-perfil.jpg'
 
 
+
 const Header = () => {
 
   const navigate = useNavigate()
-
   const token = localStorage.getItem('token')
-
+  const toastSuccess = useToast({
+    position: 'top',
+    duration: 5000,
+    render: () => (
+      <Box
+        display={'flex'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        color='white'
+        p={3}
+        bg='mediumseagreen'
+        border='1px solid white'
+        fontWeight={'extrabold'}>
+        Deslogado com sucesso!
+      </Box>
+    )
+  })
   const logout = () => {
    
       localStorage.removeItem('token')
-      alert('Deslogado com sucesso')
+      toastSuccess()
       goToLoginPage(navigate)
     
   }
